@@ -1,4 +1,12 @@
 @charset "UTF-8";
+@font-face{
+    font-family: 'FonteLogo';
+    src: url("../curso-html-css-js/curso-html5-pacote01/projeto-glass-html5/_fonts/computer-font.ttf");
+}
+@font-face{
+    font-family:'Titillium';
+    src: url("../curso-html-css-js/curso-html5-pacote01/projeto-glass-html5/_fonts/TitilliumWeb-ExtraLight.ttf");
+}
 
 body{
     background-color: #dddddd;
@@ -7,23 +15,47 @@ body{
 
 div#interface{
     width:900px;
-    background-color: white;
+    background-color: #ffffff;
     margin: -20px auto 0px auto;
     box-shadow: 0px 0px 10px rgba(0,0,0,.5);
-    padding: 25px;
+    padding: 10px;
 }
 
 p{
     text-align: justify;
     text-indent: 50px; 
       }
+
+/*Cabeçalho*/      
+
 header#cabecalho img#icone{
     position: absolute;
-    left: 1250px;
-    top: 50px;
+    left: 780px;
+    top: 70px;
+}/*óculos-WIP*/
+
+header#cabecalho{
+    border-bottom: 1px #606060 solid;
+    height: 150px;
+    background: url("../curso-html-css-js/curso-html5-pacote01/projeto-glass-html5/_imagens/glass-logo-peq.jpg") no-repeat 0px 80px;
 }
 
-header#cabecalho
+header#cabecalho h1{
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 30pt;
+    color:#606060;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+header#cabecalho h2{
+    font-family: 'Titillium', sans-serif;
+    color: #888;
+    font-size: 15pt;
+    padding: 0px;
+    margin-top: 0px;
+}
 
 /* Formatação de imagens com legendas*/
 
