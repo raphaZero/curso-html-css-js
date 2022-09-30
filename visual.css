@@ -134,7 +134,7 @@ section#base{
     border-right: 1px solid #606060;
     padding-right: 15px;
 }    
-
+/* tabela*/
 table#tabelaspec{
     border: 1px solid #606060;
     border-spacing: 0px;
@@ -148,6 +148,33 @@ table#tabelaspec td{
     text-align: center;
     vertical-align: middle;
 }
+
+table#tabelaspec td.ce{
+    color: #fff;
+    background-color: #606060;
+    vertical-align: top;
+    font-weight: bold;
+    text-align: right;
+}
+
+table#tabelaspec td.cd{
+    background-color: #cecece;
+}
+
+table#tabelaspec caption{
+    color: #888888;
+    font-size: 14pt;
+    font-weight: bolder;
+}
+
+table#tabelaspec caption span{
+    display: block;
+    float: right;
+    color: #000;
+    font-size: 8pt;
+    margin-top: 10px;
+}
+/* tabela*/
 
 aside#lateral{
     display: block;
