@@ -5,10 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tudo sobre Google Glass</title>
-    <link rel="stylesheet" type="text/css" href="visual.css"><!--Estilo CSS-->
+    <link rel="stylesheet" type="text/css" href="visual.css">
+    <link rel="stylesheet" type="text/css" href="curso-html5-pacote01/projeto-glass-html5/_css/form.css">
+    <!--Estilo CSS-->
 </head><!--Estilo JS-->
     <script src="curso-html5-pacote01/projeto-glass-html5/_javascript/funcoes.js"> 
         
+    </script>
+    <script>
+        function calc_total() {
+            var qtd = parseInt(document.getElementById('cQtd').value);
+            tot = qtd*1500;
+            document.getElementById('cTot').value = tot;
+        }
     </script>
 <body>
     <div id="interface">
@@ -45,7 +54,11 @@
         </header>
     </article>
 
-    <fomr method="post" id="fContato" action="mailto:wip@gmail.com"><!--Formulário-->
+    <atricle>
+        <p id="importante">Está página não irá efetuar transações, nem receber os dados digitados. Todo o formulário aqui apresentado é de exposição.</p>
+    </atricle>
+
+    <form method="post" id="fContato" action="mailto:wip@gmail.com" oninput="calc_total();"><!--Formulário-->
 <fieldset id="usuario">        
 <legend>Identificação do Usuário</legend>
     <p><label for="cNome">Nome:</label><input type="text" name="tNome" id="cNome" size="23" maxlength="60" placeholder="Digite seu nome completo aqui" ></p>
@@ -99,19 +112,20 @@
 <fieldset id="mensagem">
 <legend>Mensagem do Usuário</legend>
     <p><label for="cGrau">Grau de Urgência: Mín</label><input type="range" name="tGrau" id="cGrau" min="0" max="10" step="5">Máx</p>
-    <p><label for="cMensagem">Mensagem:<br></label><textarea name="tMensagme" id="cMensagem" cols="45" rows="1" placeholder="Escreva aqui sua mensagem" ></textarea></p>
+    <p><label for="cMensagem">Mensagem:<br></label><textarea name="tMensagme" id="cMensagem" cols="45" rows="5" placeholder="Escreva aqui sua mensagem" ></textarea></p>
 </fieldset>
 
-<!--OPCIONAL
-Quero um Google Glass
-    Gostaria de adquirir um Google Glass quando disponível
-    Cor:
-    Quantidade:
-    Preço Total: R$
--->
+<!--OPCIONAL-->
+<fieldset id="pedido">
+<legend>Quero um Google Glass</legend>
+    <p><input type="checkbox" name="tPed" id="cPed"><label for="cPed">Gostaria de adquirir um Google Glass quando disponível</label></p>
+    <p><label>Cor:</label><input type="color" name="tCor" id="cCor" value="#"></p>
+    <p><label>Quantidade:</label><input type="number" name="tQtd" id="cQtd" min="0" max="5" value="0"></p>
+    <p><label>Preço Total: R$</label><input type="text" name="tTot" id="cTot" placeholder="Total à pagar" readonly></p>
+</fieldset>
 
-[BOTÃO ENVIAR]
-    </fomr>
+<input type="image" name="tEnviar" src="curso-html5-pacote01/projeto-glass-html5/_imagens/botao-enviar.png">
+    </form>
 
 <footer id="rodape">
     <p>Copyright 2013 - by <a href="https://www.cursoemvideo.com/" target="_blank">Gustavo Guanabara</a> 
